@@ -1,0 +1,63 @@
+/* ===========================
+   ToC 
+
+   1.0 Phones 0 - 549px 
+   1.1 Results
+   =========================== */
+
+/* =================
+   Custom Properties
+   ================= */
+
+:root {
+  // Colors
+
+  --color-orange: 25deg, 97%, 53%;
+
+  --color-grey: 217deg, 12%, 63%;
+  --color-bubble: 213deg, 19%, 19%;
+  --color-dark-blue: 213deg, 19%, 13%;
+  --color-very-dark-blue: 216deg, 12%, 8%;
+  --color-white: 0deg, 0%, 100%;
+}
+
+/* =================
+   Mixins
+   ================= */
+
+// Grid w/borders from https://geary.co/internal-borders-css-grid/
+
+/* ==============================
+   1.0 Phones & Tablets 0 - 900px 
+   ============================== */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: hsl(var(--color-dark-blue));
+  font-size: 2rem;
+  row-gap: 2rem;
+  padding: 2rem;
+
+  @media (min-width: 500px) {
+    padding: 3rem;
+    row-gap: 2.5rem;
+
+    max-width: 500px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 480px;
+    padding-inline-start: 3rem;
+    padding-inline-end: 4rem;
+
+    row-gap: 1.5rem;
+  }
+}
+
+.main-title {
+  font-size: 4rem;
+  color: hsl(var(--color-orange));
+}
