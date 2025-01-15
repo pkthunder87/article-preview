@@ -14,13 +14,10 @@
 
 :root {
   // Colors
-
-  --color-orange: 25deg, 97%, 53%;
-
-  --color-grey: 217deg, 12%, 63%;
-  --color-bubble: 213deg, 19%, 22%;
-  --color-dark-blue: 213deg, 19%, 15%;
-  --color-very-dark-blue: 216deg, 12%, 8%;
+  --color-dark-grayish-blue: 217deg, 19%, 35%;
+  --color-dark-blue: 214deg, 17%, 51%;
+  --color-grayish-blue: 212deg, 23%, 69%;
+  --color-light-grayish-blue: 210deg, 46%, 95%;
   --color-white: 0deg, 0%, 100%;
 }
 
@@ -69,8 +66,8 @@ body {
   font-style: normal;
   font-size: 1.4rem;
 
-  color: hsl(var(--color-grey));
-  background-color: hsl(var(--color-very-dark-blue));
+  color: hsl(var(--color-dark-grayish-blue));
+  background-color: hsl(var(--color-light-grayish-blue));
 
   display: flex;
   justify-content: center;
@@ -80,6 +77,11 @@ body {
     color: hsl(var(--color-grey));
     border: none;
   }
+}
+
+h1,
+h2 {
+  color: hsl(var(--color-dark-blue));
 }
 
 /* Make images easier to work with */

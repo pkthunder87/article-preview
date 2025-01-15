@@ -1,10 +1,18 @@
+import AppLayout from "./components/AppLayout";
+import ArticleImage from "./components/ArticleImage";
+import ArticleInfo from "./components/ArticleInfo";
+import ArticleProfile from "./components/ArticleProfile";
 import "./sass/main.scss";
 
 function App() {
   return (
-    <div className="main-title">
-      Whereas disregard and contempt for human rights have resulted
-    </div>
+    <AppLayout>
+      <div className="article">
+        <ArticleImage />
+        <ArticleInfo />
+        <ArticleProfile />
+      </div>
+    </AppLayout>
   );
 }
 
