@@ -12,13 +12,10 @@
 
 :root {
   // Colors
-
-  --color-orange: 25deg, 97%, 53%;
-
-  --color-grey: 217deg, 12%, 63%;
-  --color-bubble: 213deg, 19%, 22%;
-  --color-dark-blue: 213deg, 19%, 15%;
-  --color-very-dark-blue: 216deg, 12%, 8%;
+  --color-dark-grayish-blue: 217deg, 19%, 35%;
+  --color-dark-blue: 214deg, 17%, 51%;
+  --color-grayish-blue: 212deg, 23%, 69%;
+  --color-light-grayish-blue: 210deg, 46%, 95%;
   --color-white: 0deg, 0%, 100%;
 }
 
@@ -48,5 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+
+  padding-inline: 6%;
+  padding-block: 20%;
 }

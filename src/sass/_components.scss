@@ -54,6 +54,33 @@
   }
 }
 
-.main-title {
-  font-size: 4rem;
+.article {
+  border-radius: 10px;
+  background-color: hsl(var(--color-white));
+
+  &-image {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: calc(196px + 1vw);
+    object-fit: cover;
+    object-position: 0 27%;
+  }
+
+  &-info {
+    padding-inline: 3rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__para {
+    }
+  }
+
+  &-profile {
+    &__image {
+      height: 50px;
+      width: 50px;
+    }
+  }
 }
