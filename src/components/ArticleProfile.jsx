@@ -1,13 +1,17 @@
 function ArticleProfile() {
   return (
     <div className="article-profile">
-      <img
-        className="article-profile__image"
-        src="./assets/images/avatar-michelle.jpg"
-        alt="Michelle Appleton profile pic"
-      />
-      <h2 className="article-profile__author">Michelle Appleton</h2>
-      <p>28 Jun 2020 Share</p>
+      <div className="article-profile--left">
+        <img
+          className="article-profile__image"
+          src="./assets/images/avatar-michelle.jpg"
+          alt="Michelle Appleton profile pic"
+        />
+        <div className="article-profile__info">
+          <h2 className="article-profile__author">Michelle Appleton</h2>
+          <p className="article-profile__date">28 Jun 2020</p>
+        </div>
+      </div>
       <div className="article-profile__share">
         <img
           className="share-image"

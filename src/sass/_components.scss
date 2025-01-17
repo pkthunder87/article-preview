@@ -28,35 +28,10 @@
    1.0 Phones & Tablets 0 - 900px 
    ============================== */
 
-.container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  background-color: hsl(var(--color-dark-blue));
-  font-size: 2rem;
-  row-gap: 2rem;
-  padding: 2rem;
-
-  @media (min-width: 500px) {
-    padding: 3rem;
-    row-gap: 2.5rem;
-
-    max-width: 500px;
-    border-radius: 30px;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 480px;
-    padding-inline-start: 3rem;
-    padding-inline-end: 4rem;
-
-    row-gap: 1.5rem;
-  }
-}
-
 .article {
   border-radius: 10px;
   background-color: hsl(var(--color-white));
+  padding-block-end: 2.1rem;
 
   &-image {
     border-radius: 10px 10px 0 0;
@@ -68,19 +43,46 @@
 
   &-info {
     padding-inline: 3rem;
+    padding-block-start: 3.5rem;
 
     &__title {
-      font-size: 1.8rem;
+      font-size: 1.65rem;
     }
 
     &__para {
+      margin-block-start: 1.4rem;
+      font-size: 1.37rem;
+      color: hsl(var(--color-dark-blue));
     }
   }
 
   &-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    padding-block-start: 3.3rem;
+
+    &--left {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+
     &__image {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    &__author {
+      font-size: 1.35rem;
+    }
+
+    &__share {
+      padding: 0.9rem;
+      background-color: hsl(var(--color-light-grayish-blue));
+      border-radius: 50%;
     }
   }
 }
