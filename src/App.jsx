@@ -8,18 +8,34 @@ import ArticleShare from "./components/ArticleShare";
 
 function App() {
   const [showShare, setShowShare] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
-  return (
-    <AppLayout>
-      <div className="article">
-        <ArticleImage />
-        <ArticleInfo />
-        <ArticleProfile />
-        {/* <ArticleShare /> */}
-      </div>
-    </AppLayout>
-  );
+  if (isMobile)
+    return (
+      <AppLayout>
+        <div className="article">
+          <ArticleImage />
+          <ArticleInfo />
+          {showShare ? (
+            <ArticleShare setShowShare={setShowShare} />
+          ) : (
+            <ArticleProfile setShowShare={setShowShare} />
+          )}
+        </div>
+      </AppLayout>
+    );
+
+  if (!isMobile)
+    return (
+      <AppLayout>
+        <div className="article">
+          <ArticleImage />
+          <ArticleInfo />
+          <ArticleProfile setShowShare={setShowShare} />
+          {showShare && <ArticleShare setShowShare={setShowShare} />}
+        </div>
+      </AppLayout>
+    );
 }
 
 export default App;
