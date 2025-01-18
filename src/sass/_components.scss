@@ -31,7 +31,6 @@
 .article {
   border-radius: 10px;
   background-color: hsl(var(--color-white));
-  padding-block-end: 2.1rem;
 
   &-image {
     border-radius: 10px 10px 0 0;
@@ -53,6 +52,8 @@
       margin-block-start: 1.4rem;
       font-size: 1.37rem;
       color: hsl(var(--color-dark-blue));
+
+      padding-block-end: 2rem;
     }
   }
 
@@ -61,7 +62,8 @@
     align-items: center;
     justify-content: space-between;
     padding-inline: 3rem;
-    padding-block-start: 3.3rem;
+    height: 45px;
+    margin-block-end: 2rem;
 
     &--left {
       display: flex;
@@ -80,9 +82,62 @@
     }
 
     &__share {
-      padding: 0.9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.3rem;
+      width: 3.3rem;
+
       background-color: hsl(var(--color-light-grayish-blue));
       border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    height: 65px;
+    border-radius: 0 0 10px 10px;
+
+    background-color: hsl(var(--color-dark-grayish-blue));
+
+    &__title {
+      color: hsl(var(--color-grayish-blue));
+      font-size: 1.3rem;
+      letter-spacing: 0.35em;
+    }
+
+    &--left {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .list {
+        display: flex;
+        gap: 1.6rem;
+        padding-inline: 0;
+      }
+
+      .twitter {
+        margin-block-start: 0.2rem;
+      }
+    }
+
+    &__share {
+      @extend .article-profile__share;
+
+      background-color: hsl(var(--color-dark-blue));
+
+      svg path {
+        fill: white;
+      }
     }
   }
 }
