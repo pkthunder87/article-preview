@@ -11,7 +11,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Live Site URL: [Github Pages](ReplaceLiveURL)
+- Live Site URL: [Github Pages](https://pk-article-prev.netlify.app/)
 
 ### Built with
 
