@@ -113,6 +113,7 @@
       color: hsl(var(--color-grayish-blue));
       font-size: 1.3rem;
       letter-spacing: 0.35em;
+      text-transform: uppercase;
     }
 
     &--left {
@@ -125,14 +126,10 @@
         display: flex;
         gap: 1.6rem;
         padding-inline: 0;
-
-        &__item {
-          cursor: pointer;
-        }
       }
 
       .twitter {
-        margin-block-start: 0.2rem;
+        margin-block-start: 0.25rem;
       }
     }
 
