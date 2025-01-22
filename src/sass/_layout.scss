@@ -28,13 +28,14 @@
   text-align: center;
 
   text-wrap: balance;
+  color: hsl(var(--color-dark-grayish-blue));
 
   @media (min-width: 500px) {
   }
 }
 
 .attribution a {
-  color: hsl(var(--color-orange));
+  color: hsl(207deg, 49%, 35%);
 }
 
 /* =============

@@ -5,6 +5,7 @@ import ArticleInfo from "./components/ArticleInfo";
 import ArticleProfile from "./components/ArticleProfile";
 import "./sass/main.scss";
 import ArticleShare from "./components/ArticleShare";
+import Attribution from "./components/Attribution";
 
 function App() {
   const [showShare, setShowShare] = useState(false);
@@ -17,29 +18,35 @@ function App() {
 
   if (isMobile)
     return (
-      <AppLayout>
-        <div className="article">
-          <ArticleImage />
-          <ArticleInfo />
-          {showShare ? (
-            <ArticleShare setShowShare={setShowShare} />
-          ) : (
-            <ArticleProfile setShowShare={setShowShare} />
-          )}
-        </div>
-      </AppLayout>
+      <div>
+        <AppLayout>
+          <div className="article">
+            <ArticleImage />
+            <ArticleInfo />
+            {showShare ? (
+              <ArticleShare setShowShare={setShowShare} />
+            ) : (
+              <ArticleProfile setShowShare={setShowShare} />
+            )}
+          </div>
+        </AppLayout>
+        <Attribution />
+      </div>
     );
 
   if (!isMobile)
     return (
-      <AppLayout>
-        <div className="article">
-          <ArticleImage />
-          <ArticleInfo />
-          <ArticleProfile setShowShare={setShowShare} />
-          {showShare && <ArticleShare setShowShare={setShowShare} />}
-        </div>
-      </AppLayout>
+      <div>
+        <AppLayout>
+          <div className="article">
+            <ArticleImage />
+            <ArticleInfo />
+            <ArticleProfile setShowShare={setShowShare} />
+            {showShare && <ArticleShare setShowShare={setShowShare} />}
+          </div>
+        </AppLayout>
+        <Attribution />
+      </div>
     );
 }
 
