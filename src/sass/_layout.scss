@@ -28,7 +28,10 @@
   text-align: center;
 
   text-wrap: balance;
-  color: hsl(var(--color-dark-grayish-blue));
+  color: hsl(var(--color-dark-blue));
+  position: absolute;
+  bottom: 7%;
+  left: 18%;
 
   @media (min-width: 500px) {
   }
