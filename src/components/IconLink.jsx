@@ -1,6 +1,10 @@
-function IconLink({ url, siteName }) {
+function IconLink({ url, siteName, setShowShare }) {
+  function handleClick() {
+    setShowShare(false);
+  }
+
   return (
-    <li className="list__item">
+    <li onClick={handleClick} className="list__item">
       <a target="_blank" rel="noreferrer" href={url}>
         <img
           className={siteName}

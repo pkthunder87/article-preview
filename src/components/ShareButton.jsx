@@ -1,5 +1,6 @@
 function ShareButton({ setShowShare, bgColor, fill }) {
-  function handleShowShare() {
+  function handleShowShare(event) {
+    event.stopPropagation();
     setShowShare((show) => !show);
   }
 

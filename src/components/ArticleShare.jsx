@@ -1,24 +1,61 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import IconLink from "./IconLink";
 import ShareButton from "./ShareButton";
 
-function ArticleShare({ setShowShare, isMobile }) {
+function ArticleShare({ showShare, setShowShare, isMobile }) {
   const shareRef = useRef();
 
-  const handleClick = (e) => {
-    if (shareRef.current !== e.target) {
-      setShowShare(false);
-    }
-  };
+  useEffect(
+    function () {
+      function handleClick(e) {
+        if (shareRef.current && !shareRef.current.contains(e.target)) {
+          setShowShare(false);
+        }
+      }
+
+      document.addEventListener("click", handleClick, true);
+
+      return () => document.removeEventListener("click", handleClick);
+    },
+    [setShowShare]
+  );
+
+  useEffect(
+    function () {
+      function handleKeyPress(e) {
+        if (showShare && e.keyCode === 27) {
+          e.stopPropagation();
+          setShowShare(false);
+        }
+      }
+
+      document.addEventListener("keydown", handleKeyPress, true);
+
+      return () => document.removeEventListener("keydown", handleKeyPress);
+    },
+    [showShare, setShowShare]
+  );
 
   return (
-    <div ref={shareRef} onClick={handleClick} className="article-share">
+    <div ref={shareRef} className="article-share">
       <div className="article-share--left">
         <h2 className="article-share__title">Share</h2>
         <ul className="list">
-          <IconLink url="https://www.facebook.com/" siteName="facebook" />
-          <IconLink url="https://x.com/" siteName="twitter" />
-          <IconLink url="https://www.pinterest.com/" siteName="pinterest" />
+          <IconLink
+            setShowShare={setShowShare}
+            url="https://www.facebook.com/"
+            siteName="facebook"
+          />
+          <IconLink
+            setShowShare={setShowShare}
+            url="https://x.com/"
+            siteName="twitter"
+          />
+          <IconLink
+            setShowShare={setShowShare}
+            url="https://www.pinterest.com/"
+            siteName="pinterest"
+          />
         </ul>
       </div>
 
