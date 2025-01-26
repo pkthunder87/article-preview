@@ -116,9 +116,9 @@
       border-radius: 10px;
       justify-content: center;
 
-      position: absolute;
-      left: 78%;
-      bottom: 20%;
+      position: fixed;
+      // left: 668px;
+      // top: 205px;
 
       &:before {
         content: " ";

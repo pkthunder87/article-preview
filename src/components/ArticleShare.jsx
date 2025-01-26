@@ -20,6 +20,22 @@ function ArticleShare({ showShare, setShowShare, isMobile }) {
     [setShowShare]
   );
 
+  useEffect(() => {
+    const buttonEl = document
+      ?.querySelector(".article-profile__share")
+      ?.getBoundingClientRect();
+
+    const articleShare = document.querySelector(".article-share");
+
+    console.log(buttonEl.y);
+    console.log(buttonEl.x);
+
+    articleShare.style.left = buttonEl.x - 109 + "px";
+    articleShare.style.bottom = buttonEl.y - 280 + "px";
+
+    console.log(articleShare);
+  }, []);
+
   useEffect(
     function () {
       function handleKeyPress(e) {
