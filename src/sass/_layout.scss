@@ -54,4 +54,12 @@
 
   padding-inline: 6%;
   padding-block: 20%;
+
+  @media (min-width: 520px) {
+    padding-block: 1%;
+  }
+
+  @media (min-width: 700px) {
+    padding-block: 1%;
+  }
 }

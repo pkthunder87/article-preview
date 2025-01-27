@@ -33,12 +33,34 @@
   background-color: hsl(var(--color-white));
   position: relative;
 
+  @media (min-width: 830px) {
+    display: grid;
+    grid-template-columns: 306px 480px;
+  }
+
+  &--right {
+    @media (min-width: 830px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   &-image {
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: calc(196px + 1vw);
     object-fit: cover;
     object-position: 0 27%;
+
+    @media (min-width: 525px) {
+      object-position: 0 40%;
+    }
+
+    @media (min-width: 830px) {
+      border-radius: 10px 0px 0 10px;
+      object-fit: fill;
+      height: fit-content;
+    }
   }
 
   &-info {

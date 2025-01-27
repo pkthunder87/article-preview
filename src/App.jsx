@@ -22,16 +22,18 @@ function App() {
         <AppLayout>
           <div className="article">
             <ArticleImage />
-            <ArticleInfo />
-            {showShare ? (
-              <ArticleShare
-                setShowShare={setShowShare}
-                isMobile={isMobile}
-                showShare={showShare}
-              />
-            ) : (
-              <ArticleProfile setShowShare={setShowShare} />
-            )}
+            <div className="article--right">
+              <ArticleInfo />
+              {showShare ? (
+                <ArticleShare
+                  setShowShare={setShowShare}
+                  isMobile={isMobile}
+                  showShare={showShare}
+                />
+              ) : (
+                <ArticleProfile setShowShare={setShowShare} />
+              )}
+            </div>
           </div>
         </AppLayout>
         <Attribution />
@@ -44,11 +46,16 @@ function App() {
         <AppLayout>
           <div className="article">
             <ArticleImage />
-            <ArticleInfo />
-            <ArticleProfile setShowShare={setShowShare} />
-            {showShare && (
-              <ArticleShare setShowShare={setShowShare} showShare={showShare} />
-            )}
+            <div className="article--right">
+              <ArticleInfo />
+              <ArticleProfile setShowShare={setShowShare} />
+              {showShare && (
+                <ArticleShare
+                  setShowShare={setShowShare}
+                  showShare={showShare}
+                />
+              )}
+            </div>
           </div>
         </AppLayout>
         <Attribution />
