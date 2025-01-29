@@ -13,7 +13,7 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth < 701) setIsMobile(true);
+    if (window.innerWidth < 830) setIsMobile(true);
   }, []);
 
   if (isMobile)
@@ -21,6 +21,7 @@ function App() {
       <div>
         <AppLayout>
           <div className="article">
+            <Attribution />
             <ArticleImage />
             <div className="article--right">
               <ArticleInfo />
@@ -36,7 +37,6 @@ function App() {
             </div>
           </div>
         </AppLayout>
-        <Attribution />
       </div>
     );
 
@@ -45,6 +45,7 @@ function App() {
       <div>
         <AppLayout>
           <div className="article">
+            <Attribution />
             <ArticleImage />
             <div className="article--right">
               <ArticleInfo />
@@ -58,7 +59,6 @@ function App() {
             </div>
           </div>
         </AppLayout>
-        <Attribution />
       </div>
     );
 }

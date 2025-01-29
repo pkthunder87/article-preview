@@ -27,16 +27,12 @@
   font-size: 1.4rem;
   text-align: center;
 
-  text-wrap: balance;
+  width: max-content;
   color: hsl(var(--color-dark-blue));
   position: absolute;
-  bottom: 6%;
-  left: 18%;
-
-  @media (min-width: 520px) {
-    left: 50%;
-    transform: translate(-50%);
-  }
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .attribution a {
@@ -51,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   padding-inline: 6%;
   padding-block: 20%;

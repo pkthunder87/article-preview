@@ -21,6 +21,8 @@ function ArticleShare({ showShare, setShowShare, isMobile }) {
   );
 
   useEffect(() => {
+    const shareYOffset = window.innerWidth > 1400 ? 116 : 95;
+
     const buttonEl = document
       ?.querySelector(".article-profile__share")
       ?.getBoundingClientRect();
@@ -31,7 +33,7 @@ function ArticleShare({ showShare, setShowShare, isMobile }) {
     console.log(buttonEl.x);
 
     articleShare.style.left = buttonEl.x - 109 + "px";
-    articleShare.style.bottom = buttonEl.y - 280 + "px";
+    articleShare.style.bottom = buttonEl.y - shareYOffset + "px";
 
     console.log(articleShare);
   }, []);
