@@ -18,7 +18,7 @@ function App() {
 
   if (isMobile)
     return (
-      <div>
+      <>
         <AppLayout>
           <div className="article">
             <Attribution />
@@ -37,12 +37,12 @@ function App() {
             </div>
           </div>
         </AppLayout>
-      </div>
+      </>
     );
 
   if (!isMobile)
     return (
-      <div>
+      <>
         <AppLayout>
           <div className="article">
             <Attribution />
@@ -59,7 +59,7 @@ function App() {
             </div>
           </div>
         </AppLayout>
-      </div>
+      </>
     );
 }
 
